@@ -13,7 +13,6 @@
 
 using namespace std;
 
-
 class AcessoEx: public exception {
 public:
 	virtual const char* what() const throw() {
@@ -26,17 +25,17 @@ class Arranjo{
 private:
 	AcessoEx acEx;
 	int tamanho;
-	T * items = NULL;
+	T * itens = NULL;
 public:
 	Arranjo(int tam) {
-		//instanciar o array de items com new (pratica 1) e seta tamanho
-		items = new T[tam]();
+		//instanciar o array de itens com new (pratica 1) e seta tamanho
+		itens = new T[tam]();
 		tamanho = tam;
 	}
 
 	virtual ~Arranjo() {
-		// destruir o array de items
-		delete []items;
+		// destruir o array de itens
+		delete []itens;
 	}
 
 	virtual T get(int idx) {
@@ -45,7 +44,7 @@ public:
 		{
 			throw acEx;
 		}
-		return items[idx];
+		return itens[idx];
 	}
 
 	virtual void set(int idx, const T & item) {
@@ -54,7 +53,7 @@ public:
 		{
 			throw acEx;
 		}
-		items[idx] = item;
+		itens[idx] = item;
 	}
 
 	virtual void exibir();
@@ -63,9 +62,9 @@ public:
 
 template <class T>
 void Arranjo<T>::exibir() {
-	//exibir cad item do array numa linha da forma "<idx>: <item>"
+	//exibir cada item do array numa linha da forma "<idx>: <item>"
 	for(int i=0;i<this->tamanho;i++){
-		cout<<"<"<<i<<">: <"<<this->items[i]<<">"<<endl;
+		cout<<"<"<<i<<">: <"<<this->itens[i]<<">"<<endl;
 	}
 }
 

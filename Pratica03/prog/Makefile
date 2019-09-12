@@ -1,7 +1,8 @@
 #
 #	Makefile writen by Henrique Martins
+#
 #	-Enter "make clean" to clean the project
-#	-Enter "make all" to build the target
+#	-Enter "make all" to build the target and run or just type "make" to simplify things
 
 #	Put here the output name
 PROGNAME = Pratica03

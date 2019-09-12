@@ -7,6 +7,7 @@
 #include <iostream>
 #include "funcoes.h"
 #include "arranjo.h"
+#include "aluno.h"
 
 using namespace std;
 
@@ -37,32 +38,43 @@ int main(){
 	// const char * str2 = "Alpha";
 	// cout<<"A maior string é: "<<funcoes::maximo(str1,str2)<<endl;
 
+
+
 	// Arranjo<int> arr(10);
 	// arr.set(4,5);
 	// arr.set(7,15);
 	// arr.set(8,22);
 	// arr.exibir();
 
-	Arranjo<float> arr(5);
-	arr.set(0,4.56);
-	arr.set(1,2.35);
-	arr.set(2,3.67);
-	arr.set(3,9.876);
-	arr.set(4,5.94);
 
-	try{
-		arr.set(9,6.5);
-	}catch(AcessoEx &e){
-		cout<<"Um erro ocorreu: "<<e.what()<<endl;
-	}
 
-	try{
-		cout<<arr.get(-1)<<endl;
-	}catch(AcessoEx &e){
-		cout<<"Um erro ocorreu: "<<e.what()<<endl;
-	}
-	arr.exibir();
+	// Arranjo<float> arr(5);
+	// arr.set(0,4.56);
+	// arr.set(1,2.35);
+	// arr.set(2,3.67);
+	// arr.set(3,9.876);
+	// arr.set(4,5.94);
 
+	// try{
+	// 	arr.set(9,6.5);
+	// }catch(AcessoEx &e){
+	// 	cout<<"Um erro ocorreu: "<<e.what()<<endl;
+	// }
+
+	// try{
+	// 	cout<<arr.get(-1)<<endl;
+	// }catch(AcessoEx &e){
+	// 	cout<<"Um erro ocorreu: "<<e.what()<<endl;
+	// }
+	// arr.exibir();
+
+	Arranjo<Aluno> turma(3);
+
+	turma.set(0, Aluno("João","1234"));
+	turma.set(1, Aluno("Maria","5235"));
+	turma.set(2, Aluno("José","2412"));
+
+	turma.exibir();
 
 	return 0;
 }
