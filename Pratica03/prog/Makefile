@@ -18,6 +18,8 @@ CPPFLAGS = -g -gdwarf-2 -Wall -std=c++14
 
 REMOVE = rm -f
 
+all: clean comp out run
+
 run: 
 	@echo -------Running------
 	@echo
@@ -31,12 +33,9 @@ clean:
 	@echo --cleaning project---
 	@echo
 	$(REMOVE) $(OBJ)
-#$(REMOVE) $(PROGNAME)
 	@echo
-	@echo --------done--------
+	@echo -------done--------
 	@echo
-
-all: comp out
 
 out: $(OBJ)
 	@echo ----Generating out---

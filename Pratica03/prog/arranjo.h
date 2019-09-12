@@ -8,13 +8,23 @@
 #ifndef ARRANJO_H_
 #define ARRANJO_H_
 
-#include<iostream>
+#include <iostream>
+#include <exception>
 
 using namespace std;
+
+
+class AcessoEx: public exception {
+public:
+	virtual const char* what() const throw() {
+		return "Tentativa de acesso inválido!";
+	}
+};
 
 template <class T>
 class Arranjo{
 private:
+	AcessoEx acEx;
 	int tamanho;
 	T * items = NULL;
 public:
@@ -31,11 +41,19 @@ public:
 
 	virtual T get(int idx) {
 		//retorna um item do array a partir do indice
+		if ((idx<0 )||(idx>=tamanho))
+		{
+			throw acEx;
+		}
 		return items[idx];
 	}
 
 	virtual void set(int idx, const T & item) {
 		//set o item do araray apontado pelo índice usando =
+		if ((idx<0 )||(idx>=tamanho))
+		{
+			throw acEx;
+		}
 		items[idx] = item;
 	}
 
