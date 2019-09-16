@@ -1,5 +1,5 @@
 #
-#	Makefile writen by Henrique Martins
+#	Makefile written by Henrique Martins
 #
 #	-Enter "make clean" to clean the project
 #	-Enter "make all" to build the target and run or just type "make" to simplify things
@@ -11,7 +11,7 @@ CLS = clear
 TARGET = pratica3
 
 #	Specify the source list
-SRC = $(TARGET).cpp 
+SRC = $(TARGET).cpp  # for example: foo.cpp bar.cpp
 OBJ = $(SRC:%.cpp=%.o)
 
 CC = g++
