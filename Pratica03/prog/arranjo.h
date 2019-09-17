@@ -48,7 +48,7 @@ public:
 	}
 
 	virtual void set(int idx, const T & item) {
-		//set o item do araray apontado pelo índice usando =
+		//seta o item do array apontado pelo índice usando =
 		if ((idx<0 )||(idx>=tamanho))
 		{
 			throw acEx;
