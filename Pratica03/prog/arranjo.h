@@ -15,15 +15,14 @@ using namespace std;
 
 class AcessoEx: public exception {
 public:
-	virtual const char* what() const throw() {
-		return "Tentativa de acesso inválido!";
+	const char* what() const throw() {
+		return "Tentativa de acesso invalido!";
 	}
 };
 
 template <class T>
 class Arranjo{
-private:
-	AcessoEx acEx;
+private:	
 	int tamanho;
 	T * itens = NULL;
 public:
@@ -42,6 +41,7 @@ public:
 		//retorna um item do array a partir do indice
 		if ((idx<0 )||(idx>=tamanho))
 		{
+			AcessoEx acEx;
 			throw acEx;
 		}
 		return itens[idx];
@@ -51,6 +51,7 @@ public:
 		//seta o item do array apontado pelo índice usando =
 		if ((idx<0 )||(idx>=tamanho))
 		{
+			AcessoEx acEx;
 			throw acEx;
 		}
 		itens[idx] = item;

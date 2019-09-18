@@ -21,7 +21,7 @@ REMOVE = rm -f
 
 all: clean comp out run
 
-run: 
+run:
 	@echo -------Running------
 	@echo
 	@echo
@@ -34,6 +34,7 @@ clean:
 	@echo --cleaning project---
 	@echo
 	$(REMOVE) $(OBJ)
+	$(REMOVE) $(PROGNAME)
 	@echo
 	@echo -------done--------
 	@echo

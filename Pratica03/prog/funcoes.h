@@ -31,28 +31,12 @@ namespace funcoes{
 
 	template<>
 	const char * maximo<const char *>(const char * a, const char * b){
-		const char * result = "";
-		if(strcmp(a,b)>0){
-			result = a;
-		}else if(strcmp(a,b)<0){
-			result = b;
-		}else{
-			result = "iguais!";
-		}
-		return result;
+		return strcmp(a,b) ? a : b;
 	}
 
 	template<>
 	const char * minimo<const char *>(const char * a, const char * b){
-		const char * result = "";
-		if(strcmp(a,b)>0){
-			result = b;
-		}else if(strcmp(a,b)<0){
-			result = a;
-		}else{
-			result = "iguais!";
-		}
-		return result;
+		return strcmp(a,b) ? b : a;
 	}
 }
 

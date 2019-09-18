@@ -12,33 +12,42 @@
 using namespace std;
 
 int main(){
+	
 	// int x = 5, y = 10, z = 30;
-	// float x = 5.5, y = 10.15, z = 30.7;
-
-	// funcoes::trocar(x,y);
-	// cout<<"O mínimo entre "<< x <<" e "<< y <<" é: "
+	// // float x = 5.5, y = 10.15, z = 30.7;
+	// trocar(x,y);
+	// // funcoes::trocar(x,y);
+	// cout<<"O minimo entre "<< x <<" e "<< y <<" e: "
 	// 		<<minimo(x,y)<<endl;
-	// cout<<"O máximo entre "<< x <<" e "<< y <<" é: "
+	// cout<<"O maximo entre "<< x <<" e "<< y <<" e: "
 	// 		<<maximo(x,y)<<endl;
 
+	/***********************************************************/
+
 	// const char * str1 = "Omega";
 	// const char * str2 = "Alpha";
-	// cout<<"A maior string é: "<<maximo(str1,str2)<<endl;
+	// cout<<"A maior string e: "<<maximo(str1,str2)<<endl;
+
+	
+	/***********************************************************/
+
 
 	// int x = 5, y = 10, z = 30;
-	// float x = 5.5, y = 10.15, z = 30.7;
+	// // float x = 5.5, y = 10.15, z = 30.7;
 
 	// funcoes::trocar(x,y);
-	// cout<<"O mínimo entre "<< x <<" e "<< y <<" é: "
+	// cout<<"O minimo entre "<< x <<" e "<< y <<" e: "
 	// 		<<funcoes::minimo(x,y)<<endl;
-	// cout<<"O máximo entre "<< x <<" e "<< y <<" é: "
+	// cout<<"O maximo entre "<< x <<" e "<< y <<" e: "
 	// 		<<funcoes::maximo(x,y)<<endl;
+
+	/***********************************************************/
 
 	// const char * str1 = "Omega";
 	// const char * str2 = "Alpha";
-	// cout<<"A maior string é: "<<funcoes::maximo(str1,str2)<<endl;
+	// cout<<"A maior string e: "<<funcoes::minimo(str1,str2)<<endl;
 
-
+	/***********************************************************/
 
 	// Arranjo<int> arr(10);
 	// arr.set(4,5);
@@ -46,6 +55,8 @@ int main(){
 	// arr.set(8,22);
 	// arr.exibir();
 
+
+	/***********************************************************/
 
 
 	// Arranjo<float> arr(5);
@@ -68,11 +79,13 @@ int main(){
 	// }
 	// arr.exibir();
 
+	/***********************************************************/
+
 	Arranjo<Aluno> turma(3);
 
-	turma.set(0, Aluno("João","1234"));
+	turma.set(0, Aluno("Joao","1234"));
 	turma.set(1, Aluno("Maria","5235"));
-	turma.set(2, Aluno("José","2412"));
+	turma.set(2, Aluno("Jose","2412"));
 
 	turma.exibir();
 
