@@ -8,7 +8,7 @@
 PROGNAME = Pratica04
 CLS = clear
 
-TARGET = lista
+TARGET = polonesa
 
 #	Specify the source list
 SRC = $(TARGET).cpp  # for example: foo.cpp bar.cpp
@@ -35,6 +35,7 @@ clean:
 	@echo
 	$(REMOVE) $(OBJ)
 	$(REMOVE) $(PROGNAME)
+	$(REMOVE) $(PROGNAME).exe
 	@echo
 	@echo -------done--------
 	@echo

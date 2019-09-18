@@ -35,6 +35,7 @@ clean:
 	@echo
 	$(REMOVE) $(OBJ)
 	$(REMOVE) $(PROGNAME)
+	$(REMOVE) $(PROGNAME).exe
 	@echo
 	@echo -------done--------
 	@echo
