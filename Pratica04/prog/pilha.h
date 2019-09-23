@@ -19,7 +19,9 @@ public:
 
     void empilha(T item) {
         if(topo < capacidade) {
-            itens[topo++] = item;
+            itens[topo] = item;
+            // cout<<"empilhando: "<<itens[topo]<<endl;
+            topo++;
         } else {
             cout<<"Estouro de pilha!";
         }
@@ -29,7 +31,9 @@ public:
         T dado = 0;
         if (topo > 0)
         {
-            dado = itens[topo--];
+            topo--;
+            dado = itens[topo];
+            // cout<<"desempilhando: "<<itens[topo]<<endl;
         } else
         {
             cout<<"Pilha vazia!";
