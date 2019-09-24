@@ -1,3 +1,6 @@
+#ifndef PILHA_H_
+#define PILHA_H_
+
 #include <iostream>
 
 using namespace std;
@@ -41,3 +44,5 @@ public:
         return dado;
     }
 };
+
+#endif
