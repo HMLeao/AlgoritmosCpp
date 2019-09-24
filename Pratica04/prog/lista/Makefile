@@ -8,14 +8,14 @@
 PROGNAME = Pratica04
 CLS = clear
 
-TARGET = polonesa
+TARGET = lista
 
 #	Specify the source list
 SRC = $(TARGET).cpp  # for example: foo.cpp bar.cpp
 OBJ = $(SRC:%.cpp=%.o)
 
 CC = g++
-CPPFLAGS = -g -gdwarf-2 -Wall -std=c++14
+CPPFLAGS = -g -gdwarf-2 -Wall -std=c++11
 
 REMOVE = rm -f
 
