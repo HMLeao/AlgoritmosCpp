@@ -25,7 +25,7 @@ public:
     T pega(int idx) {
         idx++;
         T valorRetorno = 0;
-        if(idx>tamAtual) {
+        if(idx>(tamAtual-1)) {
             valorRetorno = itens[idx];
         } else {
             cout << "indice invalido!" << endl;
@@ -63,7 +63,7 @@ public:
             idx--;
             for(int i=idx; i < (tamAtual-1); i++) {
                 itens[idx] = itens[idx+1];
-                itens[idx+1] = 0;
+               // itens[idx+1] = 0;
             }
             tamAtual--;
         } else {
@@ -75,6 +75,7 @@ public:
         for(int i=0; i<tamAtual; i++) {
             cout << itens[i] << " ";
         }
+        cout << endl;
     }
 };
 
