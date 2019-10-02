@@ -5,7 +5,7 @@
  *      Author: ramide
  */
 #include <iostream>
-#include "pilha.h"
+#include "pilha2.h"
 
 using namespace std;
 
