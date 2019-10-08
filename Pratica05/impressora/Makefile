@@ -5,7 +5,7 @@
 #	-Enter "make all" to build the target and run or just type "make" to simplify things
 
 #	Put here the output name
-PROGNAME = Pratica04
+PROGNAME = Pratica05
 CLS = clear
 
 TARGET = impressora

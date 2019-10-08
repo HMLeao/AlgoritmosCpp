@@ -11,7 +11,7 @@
 #include <chrono>
 #define PAUSA(tempo) std::this_thread::sleep_for(std::chrono::milliseconds(tempo * 1000));
 
-#include "fila.h"
+#include "fila2.h"
 
 using namespace std;
 

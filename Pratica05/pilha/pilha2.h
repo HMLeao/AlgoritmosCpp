@@ -1,5 +1,5 @@
-#ifndef PILHA_H_
-#define PILHA_H_
+#ifndef PILHA2_H_
+#define PILHA2_H_
 
 #include <iostream>
 
@@ -24,7 +24,10 @@ public:
         topo = NULL;
     }
 
-    ~Pilha() {}
+    ~Pilha() {
+        // cout << "Desalocando recursos..." << endl;
+        delete topo;
+    }
 
     void empilha(T item) {
         Node * newNode = new Node();
