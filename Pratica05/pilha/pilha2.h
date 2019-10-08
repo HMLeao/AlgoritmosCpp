@@ -44,7 +44,7 @@ public:
              cout<<"Pilha vazia!";
         }
         return dado;
-    }
+    } 
 };
 
 #endif
