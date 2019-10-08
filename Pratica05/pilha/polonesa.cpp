@@ -16,7 +16,7 @@ int ehOperador(char token) {
 	case '*':
 	case '/': return 1;
 	default: return 0;
-	}
+	}  
 }
 
 int avalia(char token, int valorEsq, int valorDir) {
@@ -48,6 +48,6 @@ int polonesa(const char * exp) {
 }
 
 int main() {
-	cout << polonesa("23+31-*") << endl;
-	// cout << polonesa("93*42/-") << endl; 
+	// cout << polonesa("23+31-*") << endl;
+	cout << polonesa("93*42/-") << endl; 	
 }

@@ -32,13 +32,11 @@ public:
 
     T desempilha() {
         T dado = 0;
-        if (topo > 0)
-        {
+        if (topo > 0) {
             topo--;
             dado = itens[topo];
             // cout<<"desempilhando: "<<itens[topo]<<endl;
-        } else
-        {
+        } else {
             cout<<"Pilha vazia!";
         }
         return dado;

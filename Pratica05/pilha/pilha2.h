@@ -9,16 +9,18 @@ template <class T>
 class Pilha{
 private:
 
-    template <class T>
     class Node {
+    public:
         T dado;
         Node * prox;
     };
 
-    Node * topo;
+    Node * topo;  
+    int max;
 
 public:
-    Pilha() {
+    Pilha(int capMax) {
+        max = capMax;
         topo = NULL;
     }
 
@@ -32,14 +34,16 @@ public:
     }
 
     T desempilha() {
+        T dado = 0;
         if(topo != NULL){
-            T dado = topo->dado;
+            dado = topo->dado;
             Node * temp = topo;
             topo = topo->prox;
             delete temp;
         } else {
-            return 0;
+             cout<<"Pilha vazia!";
         }
+        return dado;
     }
 };
 

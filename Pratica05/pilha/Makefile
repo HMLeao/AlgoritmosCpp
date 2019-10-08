@@ -15,7 +15,7 @@ SRC = $(TARGET).cpp  # for example: foo.cpp bar.cpp
 OBJ = $(SRC:%.cpp=%.o)
 
 CC = g++
-CPPFLAGS = -g -gdwarf-2 -Wall -std=c++14
+CPPFLAGS = -g -gdwarf-2 -Wall -std=c++14  
 
 REMOVE = rm -f
 
