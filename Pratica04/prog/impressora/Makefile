@@ -22,10 +22,11 @@ REMOVE = rm -f
 all: clean comp out run
 
 run:
+	@clear
 	@echo -------Running------
 	@echo
 	@echo
-	./$(PROGNAME)
+	@./$(PROGNAME)
 	@echo
 	@echo -----terminated------
 	@echo

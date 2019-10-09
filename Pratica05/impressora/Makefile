@@ -25,7 +25,7 @@ run:
 	@echo -------Running------
 	@echo
 	@echo
-	./$(PROGNAME)
+	@./$(PROGNAME)
 	@echo
 	@echo -----terminated------
 	@echo
