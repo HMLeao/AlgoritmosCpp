@@ -37,8 +37,8 @@ void searchRemoveShow(BinaryTree &tree, int value, int show) {
 }
 
 int main() {
-	int values [10] = {10, 35, 22, 16, 1, 45, 17, 88, 62, 7}; // ordem de inserção
-	int sorted [10] = {1, 7, 10, 16, 17, 22, 35, 45, 62, 88}; // ordem natural, para testes
+	int values [10] = {10, 35, 22, 16, 1, 45, 17, 88, 62, 7}; // ordem de inserï¿½ï¿½o
+	int sorted [10] = {1, 7, 10, 35, 17, 22, 16, 45, 62, 88}; // ordem natural, para testes
 	int size = 10;
 
 	BinaryTree * tree = new BinaryTree();

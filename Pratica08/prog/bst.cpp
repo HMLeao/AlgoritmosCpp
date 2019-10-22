@@ -12,7 +12,9 @@
 #include "bst.h"
 
 BinaryTree::Node * BinaryTree::insert(BinaryTree::Node * root, int key) {
-	// TODO
+	if(root == NULL) {
+		
+	}
 
 	return root;
 }
@@ -30,13 +32,13 @@ BinaryTree::Node * BinaryTree::search(BinaryTree::Node * root, int key) {
 
 BinaryTree::Node * BinaryTree::remove(BinaryTree::Node * root, int key) {
 
-	if (root == NULL) return NULL; // (sub)árvore vazia, nada a fazer
+	if (root == NULL) return NULL; // (sub)ï¿½rvore vazia, nada a fazer
 
 	if (key == root->key) { // Chave encontrada!
 		if (root->left != NULL && root->right != NULL) { // Caso 3
 			int maxLeft;
 			// Removo o maior filho da esquerda e
-			// substituo o valor do nó atual com o valor que era dele
+			// substituo o valor do nï¿½ atual com o valor que era dele
 			root->left = removeMax(root->left, maxLeft);
 			root->key = maxLeft;
 		} else { // Casos 1 e 2
@@ -75,36 +77,36 @@ BinaryTree::Node * BinaryTree::removeMax(BinaryTree::Node * root, int & max) {
 	return root;
 }
 
-// Acha nó predecessor (pred) a chave (key)
+// Acha nï¿½ predecessor (pred) a chave (key)
 void BinaryTree::predecessor(Node * root, Node * & pred, int key) {
 	if (root == NULL) return;
 
 	if (root->key == key) { 		// Chave encontrada
-		root = root->left;			// Desce a esquerda, pred não é mexido inicialmente
+		root = root->left;			// Desce a esquerda, pred nï¿½o ï¿½ mexido inicialmente
 		while (root != NULL) {
 			pred = root;			// pred vai ser o elemento mais a direita
 			root = root->right;
 		}
 	} else {
 		if (key < root->key)		// Chave se encontra a esquerda da raiz
-			// não mexemos em pred aqui
+			// nï¿½o mexemos em pred aqui
 			predecessor(root->left, pred, key);
 		else						// Chave se encontra a direita
-			// No caso de predecessor, pred é atualizado quando descemos a direita
+			// No caso de predecessor, pred ï¿½ atualizado quando descemos a direita
 			predecessor(root->right, pred = root, key);
 	}
 }
 
-// Acha nó sucessor (succ) a chave (key)
+// Acha nï¿½ sucessor (succ) a chave (key)
 void BinaryTree::successor(Node * root, Node * & succ, int key) {
 	// TODO
 }
 
-// Valida a árvore
-// min e max são o menor e o maior valores contidas na árvore, respectivamente
+// Valida a ï¿½rvore
+// min e max sï¿½o o menor e o maior valores contidas na ï¿½rvore, respectivamente
 int BinaryTree::validate(Node * root, int &min, int &max) {
 
-	if (root == NULL) { // Árvore vazia é válida
+	if (root == NULL) { // ï¿½rvore vazia ï¿½ vï¿½lida
 		min = INT_MAX;
 		max = INT_MIN;
 		return 1;
@@ -113,13 +115,13 @@ int BinaryTree::validate(Node * root, int &min, int &max) {
 	int lmin, lmax; // menor e maior a esquerda
 	int rmin, rmax; // menor e maior a direita
 
-	// Se árvore à esquerda é inválida ou maior a esquerda > raiz então INVÁLIDA
+	// Se ï¿½rvore ï¿½ esquerda ï¿½ invï¿½lida ou maior a esquerda > raiz entï¿½o INVï¿½LIDA
 	if (!validate(root->left, lmin, lmax) || (lmax > root->key)) return 0;
 
-	// Se árvore à direita é inválida ou menor à direita < raiz então INVÁLIDA
+	// Se ï¿½rvore ï¿½ direita ï¿½ invï¿½lida ou menor ï¿½ direita < raiz entï¿½o INVï¿½LIDA
 	if (!validate(root->right, rmin, rmax) || (rmin < root->key)) return 0;
 
-	// Computando menor e maior para árvore em root
+	// Computando menor e maior para ï¿½rvore em root
 	min = (root->left != NULL)?lmin:root->key;
 	max = (root->right != NULL)?rmax:root->key;
 
